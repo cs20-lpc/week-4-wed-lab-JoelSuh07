@@ -32,7 +32,7 @@ void DoublyList<T>::append(const T &elem) {
   // Create the new node with the value 'elem'
   Node *newNode = new Node(elem);
 
-  // We want to insert 'newNode' BEFORE 'trailer'
+  // Insert 'newNode' before 'trailer'
   // The current last node is 'trailer->prev'
   Node *lastNode = this->trailer->prev;
 
@@ -201,3 +201,4 @@ ostream &operator<<(ostream &outStream, const DoublyList<T> &myObj) {
 
   return outStream;
 }
+
