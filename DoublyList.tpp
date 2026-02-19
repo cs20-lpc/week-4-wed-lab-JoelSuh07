@@ -101,7 +101,7 @@ int DoublyList<T>::getLength() const {
 template <typename T>
 void DoublyList<T>::insert(int position, const T &elem) {
   // TO DO: Implement code to insert an element to list
-  if (position < 0 || position > this->length)
+  if (position < 0 || position >= this->length)
     throw string("insert: error, position out of bounds.");
 
   // Start at the first node(header isn't the first node, like in simple list)
@@ -201,4 +201,5 @@ ostream &operator<<(ostream &outStream, const DoublyList<T> &myObj) {
 
   return outStream;
 }
+
 
